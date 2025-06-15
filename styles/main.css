@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+}
