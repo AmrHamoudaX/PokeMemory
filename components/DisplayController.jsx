@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function DisplayController({pokemons, score, highScore,handleClick}){
+function DisplayController({pokemons, score, highScore,onClick}){
 
 
   return(
@@ -11,9 +11,9 @@ function DisplayController({pokemons, score, highScore,handleClick}){
 
   <div className="cards">
 
-          {pokemons && pokemons.map(pokemon=> {
+          {pokemons&& pokemons.map(pokemon=> {
           return (
-    <div data-clicks="0" name={pokemon.name} data-name={pokemon.name} key={pokemon.name} onClick={handleClick} className="card">
+    <div clicks={pokemon.damageTaken} name={pokemon.name} key={pokemon.name} onClick={onClick} className="card">
       <div className="wrapper">
               <img 
                 src={pokemon.coverImg}
