@@ -14,6 +14,15 @@ function GameController({pokemonsData}){
     }
   }, [pokemonsData])
 
+  //Calculate Score based on total damage taken 
+  useEffect(()=> {
+    if(pokemons){
+    setScore(pokemons.reduce(
+    (accumulator, currentValue)=> accumulator + currentValue.damageTaken,0
+    ))
+      setHighScore()
+    }
+  },[pokemons])
 
   //Allow User to hit each card once only then shuffle
   function handleCardClick(e){
