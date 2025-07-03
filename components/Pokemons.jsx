@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import GameController from "./GameController";
 
 function Pokemons(){
   const [allPokemonsUrl, setAllPokemonsUrl] = useState(null)
@@ -37,14 +38,16 @@ function Pokemons(){
              return(
             {name:pokemon.data.name, 
             coverImg: pokemon.data.sprites.other.dream_world.front_default, 
-            character: pokemon.data.sprites.other['official-artwork'].front_default,
-              hit: 0}
+            character: pokemon.data.sprites.other['official-artwork'].front_default}
             )}))
           })  
     }
   },[allPokemonsUrl])
 
 
+  return(
+  <GameController pokemonsData={pokemons} />
+  )
 }
 
 
