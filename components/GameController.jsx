@@ -15,15 +15,24 @@ function GameController({pokemonsData}){
   }, [pokemonsData])
 
 
-  function shuffleArray(){
-    setPokemons([...pokemons].sort(()=> Math.random() - .5))
-  }
-
-
+  //Allow User to hit each card once only then shuffle
   function handleCardClick(e){
-    shuffleArray()
-  }
 
+    if(e.currentTarget.getAttribute('clicks')== 0){
+      setPokemons(pokemons.map(p=>{
+        if(p.name == e.currentTarget.getAttribute('name')){
+          return {...p, damageTaken: 1}
+        }else{
+          return {...p}
+        }}).sort(()=> Math.random() - .5))
+    }else{
+      setPokemons(pokemons.map(p=> {
+        return {...p, damageTaken:0}
+      }
+      ).sort(()=> Math.random() - .5))
+    }
+    
+  }
 
   return(
   <DisplayController pokemons={pokemons} onClick={handleCardClick} score={score} highScore={highScore} />
