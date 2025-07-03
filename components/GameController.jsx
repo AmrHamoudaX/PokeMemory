@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import DisplayController from "./DisplayController"
+import useLocalStorage from "use-local-storage"
 
 function GameController({pokemonsData}){
   const [score, setScore] = useState(0)
-  const [highScore, setHighScore] = useState(0)
+  const [highScore, setHighScore] = useLocalStorage('highScore',0)
   const [pokemons, setPokemons] = useState(null)
 
   useEffect(()=> {
