@@ -1,12 +1,43 @@
-# React + Vite
+# 🧠 Pokémon Memory Battle
+A sleek and interactive memory card game featuring animated Pokémon! Test your memory and reflexes by selecting different Pokémon cards—just don’t pick the same one twice or you'll lose your streak!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎮 Features
+ ⚡ PokéAPI Integration: Fetches live Pokémon data dynamically using the PokéAPI.
 
-Currently, two official plugins are available:
+ 🧠 Memory Mechanics: Select each card once; selecting the same Pokémon again resets your score.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 🔄 Shuffling Cards: Cards shuffle after each valid selection to challenge your memory.
 
-## Expanding the ESLint configuration
+ 🏆 Score & High Score Tracking: Keeps track of your current score and stores the highest score using local storage.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ 💅 Stylish UI: Built with visually appealing Pokémon art and smooth layout.
+
+## 📦 Tech Stack
+React (with hooks)
+
+Axios for API requests
+
+PokéAPI for real-time Pokémon data
+
+use-local-storage for saving high scores
+
+CSS for custom styling and layout
+
+# Clone the repository
+``` bash
+git clone https://github.com/your-username/pokemon-memory-battle.git
+cd pokemon-memory-battle
+
+# Install dependencies
+npm install
+
+# Start the app
+npm run dev
+```
+
+## 💡 Future Improvements
+- Add game timer and difficulty levels
+
+- Include sound effects and animations
+
+- Enhance responsiveness and accessibility
